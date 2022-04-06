@@ -32,7 +32,7 @@ def process_counts():
     total += int(input(f"how many quarter? (inserted ${total}):")) * .01
     return total
 
-def is_tranaction_success(received_money, cost) :
+def is_transaction_success(received_money, cost) :
     """ return when the payment is accepted """
     if received_money >= cost:
         global profit
@@ -70,7 +70,7 @@ while True:
 
     print(f"{choice} cost ${drink['cost']}")
     payment = process_counts()
-    if not is_tranaction_success(payment, drink["cost"]):
+    if not is_transaction_success(payment, drink["cost"]):
         continue
 
     make_coffe(choice, drink["ingredients"])
